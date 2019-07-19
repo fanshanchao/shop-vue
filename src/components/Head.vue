@@ -4,7 +4,12 @@
 			<el-col :span="1" :offset="1">
 				<el-button type="text" class="bt"><router-link to="/">首页</router-link></el-button>
 			</el-col>
-			<el-col :span="2" :offset="15">
+			<el-col :span="1" :offset="1">
+				<el-button type="text" class="bt"><router-link to="/seckill"><span style="font-weight:900;
+				color:red;">限时秒杀！</span>
+				</router-link></el-button>
+			</el-col>
+			<el-col :span="2" :offset="13">
 				<!-- 根据用户是否登陆来显示注册还是用户名-->
 				<div v-if="getToken" class="menu">
 					<el-dropdown>

@@ -64,6 +64,9 @@
 					<div v-if="isContainsPermission('goods:list')">
 						<el-menu-item index="goods">商品列表</el-menu-item>
 					</div>
+					<div v-if="isContainsPermission('goods:add')">
+						<el-menu-item index="addSeckill">添加秒杀</el-menu-item>
+					</div>
 				</el-menu-item-group>
 			</el-submenu>
 		</div>

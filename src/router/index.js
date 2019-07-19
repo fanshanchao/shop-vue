@@ -19,6 +19,9 @@ const PayOrder = ()=>import('@/components/PayOrder')
 const PayMoney = ()=>import('@/components/PayMoney')
 const PaySuccess = ()=>import('@/components/PaySuccess')
 const UserOrders = ()=>import('@/components/UserOrders')
+const Seckill = ()=>import('@/components/Seckill')
+const SeckillDetail = ()=>import('@/components/SeckillDetail')
+const AddSeckill = ()=>import('@/components/AddSeckill')
 Vue.use(Router)
 
 //注意这里将默认路由的数组给导出去
@@ -57,6 +60,11 @@ export  const constantRouterMap = [
         path:'/showGoods/:goodsId',
         name:'showGoods',
         component:Goods
+    },
+    {
+        path:'/seckill',
+        name:'seckill',
+        component:Seckill
     }
   ]
 //这些路由都是没有登陆情况下可以访问的路由
@@ -122,6 +130,14 @@ export const asyncRouterMap = [
         hasPermission:'goods:add'
       }
     },{
+      path:'addSeckill',
+      component:AddSeckill,
+      name:'addSeckill',
+      meta:{
+        hasPermission:'goods:add'
+      }
+    },
+      {
       path:'orders',
       component:ConsoleOrders,
       name:'orders',
@@ -158,6 +174,11 @@ export const asyncRouterMap = [
     path:'/userOrders/:orderType',
     component:UserOrders,
     name:'userOrders'
+  },
+  {
+    path:'/seckill/:seckillId',
+    component:SeckillDetail,
+    name:'seckillDetail'
   },
   {
   path:'*',

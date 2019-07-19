@@ -1,6 +1,6 @@
 <template>
   <div class="serach">
-  	  	<el-row class="mainHeader">
+  	 <el-row class="mainHeader">
   		<el-col :span="1" :offset="1">
   			<a :href="base.github"><svg  class="gitHubIcon" aria-hidden="true"><use xlink:href="#icon-github-fill"></use></svg></a>	
   		</el-col>

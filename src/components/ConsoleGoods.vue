@@ -92,7 +92,7 @@
     <el-input-number v-model="formData.goodsRepertory"  :min="1" :max="100000" label="描述文字"></el-input-number>
   </el-form-item>
    <el-form-item label="商品价格">
-    <el-input-number v-model="formData.goodsPrice" :precision="2" :step="1" :min="1.00" :max="1000"></el-input-number>
+    <el-input-number v-model="formData.goodsPrice" :precision="2" :step="1" :min="1.00" :max="10000"></el-input-number>
   </el-form-item>
      <el-form-item label="商品分类">
    <el-select v-model="formData.typeName"  placeholder="请选择">
@@ -339,19 +339,7 @@ export default {
       		})
       	}
       },
-      //获取商品数量的方法
-      getGoodsCount(){
-      	this.$api.goods.getGoodsCount().then(res=>{
-      		this.goodsCount = res.data.data
-          console.log(this.goodsCount)
-      	})
-      },
-    //跳转到当前页的方法
-    goPage(val){
-      this.page = val //将当前页数赋值给page
-      //获取当前页的数据
-      this.getTableData(this.page)
-    }
+ 
   },
   created:function(){
   	//获取第一页数据

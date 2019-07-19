@@ -6,6 +6,7 @@
 				<el-button :plain="true" @click="open8" style="display:none;"></el-button>
 				<el-row >
 					<el-col :span="6" :offset="9">
+						<router-link to="/"><svg  class="homeIcon" aria-hidden="true"><use xlink:href="#icon-home"></use></svg></router-link>
 						<el-form :model="form" ref="form" status-icon :rules="rules2" >
 							<el-form-item  prop="userName">
 								<el-input v-model="form.userName" placeholder="用户名" autocomplete="off"></el-input>
@@ -34,7 +35,7 @@
 							    >
 							    <p>用户名：root 密码：123456 （超级管理员）</p>
 							    <p>用户名：admin 123456 （商品管理员）</p>
-							    <p>用户名：admin2 密码：root （订单管理员）</p>
+							    <p>用户名：admin2 密码：123456 （订单管理员）</p>
 							    <el-button slot="reference">获取管理员账户</el-button>
 							  </el-popover> 
 						</el-form>
@@ -143,10 +144,16 @@ export default {
 
 <style scoped>
 .el-form{
-	margin-top:40%;
+	margin-top:15%;
 	text-align: center;
 }
 #loginBt{
 	width:100%;
+}
+.homeIcon{
+	text-align:center;
+	margin-left:40%;
+	width: 3em; height: 3em;
+	margin-top:0.4em;
 }
 </style>
